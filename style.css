@@ -21,4 +21,24 @@ body {
   margin: 0 auto;
   width: 100%;
   max-width: 800px;
+  border: 1px solid black;
+}
+
+aside {
+  padding: 10px 20px;
+  width: 250px;
+  border-right: 1px solid black;
+}
+
+button {
+  cursor: pointer;
+  background-color: #fff;
+  border: solid 1px #111;
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 14px;
 }
