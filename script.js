@@ -36,4 +36,14 @@ async function getRandomUser() {
 
 function addData(obj) {
   data.push(obj);
+  updateDOM();
+}
+
+// Update Dom Function
+function updateDOM(providedData = data) {
+  // clear main div
+
+  main.innerHTML = `<h2><strong>Person</strong>Wealth</h2>`;
+
+  providedData.forEach();
 }
