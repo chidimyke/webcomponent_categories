@@ -10,11 +10,7 @@ const calculateWealthBtn = document.getElementById("calculate-wealth");
 // array definition
 let data = [];
 
-// getRandomUser();
-// getRandomUser();
-// getRandomUser();
-
-// console.log(data);
+//getRandom user function definition
 // fetch action: random user and add money
 async function getRandomUser() {
   const res = await fetch("https://randomuser.me/api");
@@ -31,6 +27,9 @@ async function getRandomUser() {
   // A created function
   addData(newUser);
 }
+
+// getRandomUser();
+// console.log(data);
 
 // Function definition for addData()
 function addData(obj) {
@@ -63,5 +62,21 @@ function formatMoney(number) {
   return "$" + number.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, "$&,");
 }
 
-// Event Listeners
+// Event Listeners: get randomUser
 addUserBtn.addEventListener("click", getRandomUser);
+
+// Definition for the doubleMoney function
+function doubleMoney() {
+  data = data.map((index) => {
+    return { ...index, money: index.money * 2 };
+  });
+
+  updateDOM(data);
+}
+
+// Event Listeners: doubleMoney
+doubleBtn.addEventListener("click", doubleMoney);
+
+// getRandomUser();
+// getRandomUser();
+// getRandomUser();
