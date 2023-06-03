@@ -77,6 +77,28 @@ function doubleMoney() {
 // Event Listeners: doubleMoney
 doubleBtn.addEventListener("click", doubleMoney);
 
+// Function definition: sortByRichest
+function sortByRichest() {
+  data.sort((a, b) => {
+    return b.money - a.money;
+  });
+
+  updateDOM();
+  // console.log(data);
+}
+// Event Listeners: sort by richest
+sortBtn.addEventListener("click", sortByRichest);
+
+// function: filter only millionaireS
+function showMillionaires() {
+  data = data.filter((index) => {
+    return index.money > 1000000;
+  });
+  updateDOM();
+}
+
+showMillionairesBtn.addEventListener("click", showMillionaires);
+
 // getRandomUser();
 // getRandomUser();
 // getRandomUser();
