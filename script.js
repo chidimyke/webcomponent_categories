@@ -58,7 +58,7 @@ function updateDOM(providedData = data) {
 
 // money format function
 function formatMoney(number) {
-  // This returns a value formatted to look like a currency number based on the regular expression
+  // This returns a value formatted to look like a currency number based on the regular expression below
   return "$" + number.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, "$&,");
 }
 
@@ -68,6 +68,7 @@ addUserBtn.addEventListener("click", getRandomUser);
 // Definition for the doubleMoney function
 function doubleMoney() {
   data = data.map((index) => {
+    // the use of a spread operator
     return { ...index, money: index.money * 2 };
   });
 
